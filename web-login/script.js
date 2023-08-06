@@ -3,23 +3,27 @@ function kontrolEt() {
   var password = document.forms["Form"]["passw"].value;
   var uyariBox1 = document.getElementById("email-uyari");
   var uyariBox2 = document.getElementById("sifre-uyari");
-  console.log(password);
 
-  if (username == "") {
-    uyariBox1.innerHTML = "Kullanıcı adı boş bırakılamaz";
+  if (username == "admin@gmail.com" && password == "adminlogin") {
+    window.location.href = "admin.php";
     return false;
   } else {
-    uyariBox1.innerHTML = "";
-  }
+    if (username == "") {
+      uyariBox1.innerHTML = "Username cannot be left blank";
+      return false;
+    } else {
+      uyariBox1.innerHTML = "";
+    }
 
-  if (password == "") {
-    uyariBox2.innerHTML = "Şifre alanı boş bırakılamaz";
-    return false;
-  } else if (password.length < 6) {
-    uyariBox2.innerHTML = "En az 6 karakter girmelisiniz";
-    return false;
-  } else {
-    uyariBox2.innerHTML = "";
+    if (password == "") {
+      uyariBox2.innerHTML = "Password field cannot be left blank";
+      return false;
+    } else if (password.length < 6) {
+      uyariBox2.innerHTML = "You must enter at least 6 characters";
+      return false;
+    } else {
+      uyariBox2.innerHTML = "";
+    }
   }
 }
 
@@ -27,6 +31,6 @@ function kontrolEt() {
 document.addEventListener("keydown", function (event) {
   if (event.code === "Space") {
     event.preventDefault();
-    alert("Boşluk karakteri kullanamazsınız!");
+    alert("You cannot use a space character!");
   }
 });

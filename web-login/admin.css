@@ -1,0 +1,41 @@
+body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    font-family: 'Inter UI', sans-serif;
+    background: #02364e;
+    color: white;
+    
+}
+.btnregister{
+    color: rgb(255, 255, 255);
+    border: 1px solid currentcolor;
+    background-color:  #002550;
+    font-size: 15px;
+    height: 50px;
+    width: auto;
+    padding: 15px 25px;
+    margin: 15px;
+    display: flex;
+    flex-direction: center; 
+    cursor: pointer;
+  }
+.ortala{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.yazi-alan{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 25px;
+}
